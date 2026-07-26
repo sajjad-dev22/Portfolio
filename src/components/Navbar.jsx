@@ -15,19 +15,19 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-12 text-slate-300 text-lg font-medium">
           <li className="cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-            Home
+           <a href="#home"> Home</a>
           </li>
           <li className="cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-            About
+           <a href="#about"> About</a>
           </li>
           <li className="cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-            Skills
+            <a href="#skills">Skills</a>
           </li>
           <li className="cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-            Projects
+            <a href="#projects">Projects</a>
           </li>
           <li className="cursor-pointer hover:text-cyan-400 transition-colors duration-300">
-            Contact
+           <a href="#contact"> Contact</a>
           </li>
         </ul>
 

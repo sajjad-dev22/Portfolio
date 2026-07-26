@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 
 function Hero() {
   return (
-    <section className="bg-slate-950 min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20 border-b-2 border-gray-500">
+    <section id="home" className="bg-slate-950 min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20 border-b-2 border-gray-500">
 
       {/* Information Section */}
       <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
@@ -26,7 +26,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
 
           <button className="px-7 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300">
-           View My Work
+            View My Work
           </button>
 
           <a
