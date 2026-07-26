@@ -1,10 +1,12 @@
 import React from "react";
+import { FiDownload } from "react-icons/fi";
+
 
 function Hero() {
   return (
-    <section className="bg-slate-950 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20">
+    <section className="bg-slate-950 min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20 border-b-2 border-gray-500">
 
-      {/* Left */}
+      {/* Information Section */}
       <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
 
         <h4 className="text-xl sm:text-2xl mb-2">
@@ -24,18 +26,23 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
 
           <button className="px-7 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300">
-            Projects
+           View My Work
           </button>
 
-          <button className="px-7 py-3 rounded-full border border-cyan-500 hover:bg-cyan-500 hover:text-black transition duration-300">
-            Resume
-          </button>
+          <a
+            href="/Sajjad_Resume.pdf" // public folder me resume rakhein download
+            className="group inline-flex items-center justify-center gap-2 rounded-full border border-cyan-400 bg-transparent px-7 py-3 font-semibold text-cyan-400 transition-all duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-slate-950 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]"
+          >
+            <FiDownload className="text-lg transition-transform duration-300 group-hover:translate-y-1" />
+            <span>Download Resume</span>
+          </a>
+
 
         </div>
 
       </div>
 
-      {/* Right */}
+      {/*Image Section*/}
       <div className="w-full lg:w-1/2 flex justify-center">
 
         <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
@@ -48,7 +55,7 @@ function Hero() {
 
           {/* Image */}
           <img
-            src="https://picsum.photos/600"
+            src="portfolio-image.jpeg"
             alt="Profile"
             className="relative w-full h-full rounded-full object-cover border-4 border-slate-900 shadow-[0_0_40px_rgba(34,211,238,0.6)] hover:scale-105 transition duration-500"
           />
