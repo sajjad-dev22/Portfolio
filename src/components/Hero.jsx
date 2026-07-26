@@ -30,7 +30,7 @@ function Hero() {
           </button>
 
           <a
-            href="/Sajjad_Resume.pdf" // public folder me resume rakhein download
+            href="Sajjad_MERN_Resume_Editable.docx" // public folder me resume rakhein download
             className="group inline-flex items-center justify-center gap-2 rounded-full border border-cyan-400 bg-transparent px-7 py-3 font-semibold text-cyan-400 transition-all duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-slate-950 hover:shadow-[0_0_25px_rgba(34,211,238,0.5)]"
           >
             <FiDownload className="text-lg transition-transform duration-300 group-hover:translate-y-1" />

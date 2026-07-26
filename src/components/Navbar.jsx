@@ -43,11 +43,11 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <ul className="md:hidden bg-slate-900 text-slate-300 flex flex-col items-center gap-6 py-6 text-lg font-medium">
-          <li className="hover:text-cyan-400 cursor-pointer">Home</li>
-          <li className="hover:text-cyan-400 cursor-pointer">About</li>
-          <li className="hover:text-cyan-400 cursor-pointer">Skills</li>
-          <li className="hover:text-cyan-400 cursor-pointer">Projects</li>
-          <li className="hover:text-cyan-400 cursor-pointer">Contact</li>
+          <li className="hover:text-cyan-400 cursor-pointer"><a href="#home">Home</a></li>
+          <li className="hover:text-cyan-400 cursor-pointer"><a href="#about">About</a></li>
+          <li className="hover:text-cyan-400 cursor-pointer"><a href="#skills">Skills</a></li>
+          <li className="hover:text-cyan-400 cursor-pointer"><a href="#projects">Projects</a></li>
+          <li className="hover:text-cyan-400 cursor-pointer"><a href="#contact">Contact</a></li>
         </ul>
       )}
     </nav>
