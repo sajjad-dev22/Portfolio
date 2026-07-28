@@ -26,7 +26,7 @@ function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
 
           <button className="px-7 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300">
-            View My Work
+            <a href="#projects">View My Work</a>
           </button>
 
           <a

@@ -109,7 +109,7 @@ export default function Footer() {
                     </p>
 
                     <a
-                        href="#home"
+                        href="/"
                         className="flex items-center gap-2 text-cyan-400 hover:text-white transition"
                     >
                         <FaArrowUp />
