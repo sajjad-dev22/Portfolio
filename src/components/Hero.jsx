@@ -1,21 +1,46 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import { FiDownload } from "react-icons/fi";
-
 
 function Hero() {
   return (
-    <section id="home" className="bg-slate-950 min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20 border-b-2 border-gray-500">
-
+    <section
+      id="home"
+      className="bg-slate-950 min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between gap-12 px-6 sm:px-10 md:px-16 lg:px-20 py-12 md:py-20 border-b-2 border-gray-500"
+    >
       {/* Information Section */}
-      <div className="w-full lg:w-1/2 text-white text-center lg:text-left">
-
+      <motion.div
+        className="w-full lg:w-1/2 text-white text-center lg:text-left"
+        initial={{ opacity: 0, x: -80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <h4 className="text-xl sm:text-2xl mb-2">
           Hello, I'm <span className="text-cyan-400">Sajjad</span>
         </h4>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+        {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
           MERN Stack <br />
           Developer
+        </h1> */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+          <TypeAnimation
+            sequence={[
+              "MERN Stack Developer",
+              2000,
+              "Problem Solver",
+              2000,
+              "Node.js Developer",
+              2000,
+              "Building Modern Websites",
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            className="text-white"
+          />
         </h1>
 
         <p className="text-slate-400 text-base sm:text-lg leading-7 sm:leading-8 max-w-xl mx-auto lg:mx-0">
@@ -24,7 +49,6 @@ function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-
           <button className="px-7 py-3 rounded-full bg-cyan-500 hover:bg-cyan-600 transition duration-300">
             <a href="#projects">View My Work</a>
           </button>
@@ -36,17 +60,17 @@ function Hero() {
             <FiDownload className="text-lg transition-transform duration-300 group-hover:translate-y-1" />
             <span>Download Resume</span>
           </a>
-
-
         </div>
-
-      </div>
+      </motion.div>
 
       {/*Image Section*/}
-      <div className="w-full lg:w-1/2 flex justify-center">
-
+      <motion.div
+        className="w-full lg:w-1/2 flex justify-center"
+        initial={{ opacity: 0, x: 80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
         <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-
           {/* Glow */}
           <div className="absolute inset-0 rounded-full bg-cyan-500 blur-3xl opacity-30"></div>
 
@@ -59,11 +83,8 @@ function Hero() {
             alt="Profile"
             className="relative w-full h-full rounded-full object-cover border-4 border-slate-900 shadow-[0_0_40px_rgba(34,211,238,0.6)] hover:scale-105 transition duration-500"
           />
-
         </div>
-
-      </div>
-
+      </motion.div>
     </section>
   );
 }

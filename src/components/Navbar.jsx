@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
+  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { id: "home", name: "Home", href: "#home" },
@@ -13,6 +14,16 @@ export default function Navbar() {
     { id: "projects", name: "Projects", href: "#projects" },
     { id: "contact", name: "Contact", href: "#contact" },
   ];
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  // ..........................
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -40,7 +51,14 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <nav className="w-full sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-lg">
+    // <nav className="w-full sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md shadow-lg">
+    <nav
+      className={`w-full sticky top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-slate-900/90 backdrop-blur-xl shadow-2xl"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-full h-20 px-6 lg:px-16 flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-3xl font-bold text-cyan-400">SAJJAD</h1>
